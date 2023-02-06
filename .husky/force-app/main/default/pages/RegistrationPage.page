@@ -1,0 +1,33 @@
+<apex:page standardController="UserRegistration__c" extensions="LoginReg">
+<!-- Begin Default Content REMOVE THIS -->
+<apex:form>
+    <apex:pageMessage severity="error" strength="2" summary="Error:" detail="{!errorMessage}" rendered="{!errorMessage != null}"/>
+    <apex:pageMessages id="shwmsg"></apex:pageMessages>
+    <h5><font size='4'>Congratulations Login here to check your data</font></h5>
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+        <table>
+        <tr>
+        <td>
+        <apex:outputLabel value="Username"></apex:outputLabel>
+        <apex:inputText value="{!username}" />
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <apex:outputLabel value="Password"></apex:outputLabel>
+        
+        </td>
+        <td><apex:inputSecret value="{!password}" /></td>
+        </tr>
+        <tr>
+        <td>
+        <apex:commandButton value="Login" action="{!Verifyuser}"  rerender="shwmsg"/>
+        </td>
+        </tr>
+        </table>
+        </apex:pageBlockSection>
+          </apex:pageBlock>
+</apex:form>
+<!-- End Default Content REMOVE THIS -->
+</apex:page>
